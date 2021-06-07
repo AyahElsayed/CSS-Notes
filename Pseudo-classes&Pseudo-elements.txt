@@ -1,0 +1,22 @@
+What Does A Pseudo-Element Do?
+=============================
+
+  It creates a phoney element and
+  inserts it before or after the content of the element that you’ve targeted.
+
+“pseudo” => means “lying, deceitful, false.”
+they don’t actually change anything in the document.
+
+pseudo-element content does not appear in the DOM. 
+They allow us to add extra content, decoration and more to our pages 
+without adding extra HTML, and they can be animated.
+
+-----------
+
+Note on “::” versus “:”:
+It’s generally accepted that we use the double colon :: to denote pseudo-elements 
+(as opposed to pseudo-classes like :hover, :first-child).
+
+* Don’t forget “content”
+This should make sure the element is visible on screen.
+
