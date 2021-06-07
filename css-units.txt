@@ -1,0 +1,79 @@
+css / units
+===========
+* Lengths
+
+1- Absolute length units
+   cm , mm , px , in
+
+2- Relative length units
+   em => Font size of the parent or font size of the element itself
+         (Relative to the font size)
+   rem => Font size of the root element.
+   vw => 1% of the viewport's width.
+   vh => 1% of the viewport's height.
+   vmin => 1% of the viewport's smaller dimension.
+   vmax => 1% of the viewport's larger dimension. 
+
+---------------------------------
+
+* color
+
+ 1- Color keywords
+ 2- Hexadecimal values
+ 3- RGB and RGBA values
+       RGB => Red , Green , blue
+       RGBA  => Red , Green , blue , opacity(opacity the color only)
+ 4- HSL and HSLA values
+       HSL => hue, saturation, and lightness values
+           Hue : The base shade of the color / value between 0 and 360 /representing the angles around a color wheel.
+           Saturation: How saturated is the color? value from 0–100%, where 0 is no color (it will appear as a shade of grey), 
+                and 100% is full color saturation
+           Lightness: How light or bright is the color? value from 0–100%, where 0 is no light (it will appear completely black)
+                and 100% is full light (it will appear completely white)
+
+-------------------------------------
+
+Percentage vs Viewport Units:
+
+  viewport units are always a percentage of the total size of the viewport, 
+  while a percentage value applied on an element is a percentage of the element’s parent, 
+  not necessarily the whole viewport.
+
+------------------------------------
+
+vmin & vmax:
+
+  -for example, that our viewport is 1440px wide and 800px tall,
+    if we set element to have a width of 50vmin, it’ll be 50% of the height (400px), 
+    and if instead we set the element to have a width of 50vmax, 
+    it’ll be 50% of the width (720px).
+  -can be useful to size title font sizes as we’ll illustrate below.
+
+-----------------------------
+
+Viewport Units for Titles:
+
+  not only great for large elements like hero sections,
+  but they can also be used to size elements like titles
+  and have their font size adjust automatically as a function of the viewport size. 
+
+
+One problem is that the title may become too large on very large viewports and too small on very small viewports.
+we can fix part of the problem by making use of the vmax unit to ensure that our title doesn’t become too little.
+
+-------------------------------
+
+The Difference Between Calc() and Preprocessor Operations:
+
+  If you calculate something in Sass/SCSS, you get a value after the compile
+  Doing the same with calc() doesn’t give back the result of the operation (the result will be some kind of live value).
+
+
+/* Preprocessor value */
+width: 100% / 5; => width: 25%; 
+
+/* CSS value */
+width: calc(100% / 5); => width: calc(100% / 5);
+
+
+with calc() your browser can calculate with different units. 
