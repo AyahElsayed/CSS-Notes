@@ -1,0 +1,53 @@
+html,
+body {
+    overflow-x: hidden;
+}
+
+.hero {
+    height: calc(100vh - 3rem);
+    width: 100vw;
+    background: linear-gradient(45deg, #DA4453, #89216B);
+}
+
+.sub-hero {
+    height: 25vh;
+    background: linear-gradient(115deg, #4e54c8, #8f94fb);
+}
+
+.hero,
+.sub-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+}
+
+/* Viewport Units for Titles */
+h1 {
+    /* font-size: 5vw; */
+    text-align: center;
+    font-size: 4vmax;
+}
+
+/* Calc() function */
+/* Preprocessor value */
+/* width: 100% / 5; => width: 25%;  */
+
+/* CSS value */
+/* width: calc(100% / 5); => width: calc(100% / 5); */
+body {
+    font-size: 14px;
+    font-size: calc(100vw / 75);
+}
+
+/* Sass
+$header_height: 100px;
+
+.main {
+     height: calc(100% - #{$header_height});
+}
+*/
